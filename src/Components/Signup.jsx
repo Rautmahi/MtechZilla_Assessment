@@ -30,6 +30,7 @@ const Signup = () => {
     setSubmitbtn(true)
 
     createUserWithEmailAndPassword(auth,value.email,value.password)
+
     .then((res)=>{
       setSubmitbtn(false)
       console.log(res)
@@ -52,6 +53,7 @@ const Signup = () => {
         bg="blue.50"
       >
         <br />
+
         <Heading color="maroon">SignUp Please</Heading>
         <br />
         <br />
@@ -76,6 +78,7 @@ const Signup = () => {
             SignUp
           </Button>
         </Box>
+        
         <br />
         <Heading fontSize={{sm:"10px",md:"15px",lg:"20px"}}>Already have an Acocount ? <Link to="/"> <span style={{"color":"red"}}> LogIn</span> </Link></Heading>
       </Box>

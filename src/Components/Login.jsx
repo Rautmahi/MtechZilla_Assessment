@@ -103,17 +103,16 @@ const {isAuth,HandleAuth}=context
             bgColor="teal"
             color="white"
             w="180px"
-            fontSize="20px"
-          >
+            fontSize="20px">
             Log-In
           </Button>
         </Box>
         <br />
+
         <Heading fontSize={{sm:"10px",md:"15px",lg:"20px"}}>
-          Need an Account ?{" "}
+          Need an Account ?
           <Link to="/signup">
-            {" "}
-            <span style={{ color: "red" }}> SignUp</span>{" "}
+            <span style={{ color: "red" }}> SignUp</span>
           </Link>
         </Heading>
         <br />

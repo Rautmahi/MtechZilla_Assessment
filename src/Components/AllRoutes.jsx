@@ -10,6 +10,7 @@ const AllRoutes = () => {
         <Routes>
             <Route path="/" element={<Login/>}/>
             <Route path="/timerapp" element={<Timer/>}/>
+            
             <Route path="/signup" element={<Signup/>}/>
         </Routes>
     </div>
