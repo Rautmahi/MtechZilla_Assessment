@@ -44,8 +44,7 @@ const Signup = () => {
     <div>
       <Box
         boxShadow="5px 5px 4px 4px"
-        // w="70%"
-        // h="540px"
+      
         w={{sm:"70%",md:"70%",lg:"70%"}} h={{sm:"320px",md:"550px",lg:"530px"}}
         m="auto"
         mt="50px"

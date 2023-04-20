@@ -9,7 +9,7 @@ const Timer = () => {
   const ref = useRef(null);
   const context = useContext(AppContext);
   const navigate = useNavigate();
-  const { auth} = context;
+  const { auth } = context;
   console.log(auth);
   useEffect(() => {
     if (!auth) {
@@ -65,19 +65,22 @@ const Timer = () => {
       <Box m="auto" mt="50px" textAlign="center">
         <Heading>Timer App</Heading>
         <Text color="red" display={startTime ? "block" : "none"}>
-          {" "}
+
           {("0" + Math.floor((startTime / 60) % 60)).slice(-2)}:
           {("0" + Math.floor(startTime % 60)).slice(-2)}
         </Text>
 
         <br />
         <Text fontSize="25px">
-          {" "}
           {("0" + Math.floor((time / 60) % 60)).slice(-2)}:
           {("0" + Math.floor(time % 60)).slice(-2)}
         </Text>
         <br />
-        <HStack m="auto" w={{sm:"30%",md:"30%",lg:"30%"}} justifyContent="space-around">
+        <HStack
+          m="auto"
+          w={{ sm: "30%", md: "30%", lg: "30%" }}
+          justifyContent="space-around"
+        >
           <Button colorScheme="orange" onClick={handleStart}>
             Start
           </Button>
