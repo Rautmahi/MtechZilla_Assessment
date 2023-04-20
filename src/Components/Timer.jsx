@@ -1,12 +1,20 @@
 import { Box, Button, Heading, HStack, Text } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { AppContext } from "../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Timer = () => {
   const [time, setTime] = useState(0);
   const [startTime, setStartTime] = useState(0);
   const ref = useRef(null);
-
+  const context = useContext(AppContext);
+  const navigate = useNavigate();
+  const { auth} = context;
+  console.log(auth);
   useEffect(() => {
+    if (!auth) {
+      navigate("/");
+    }
     return () => {
       clearInterval(ref.current);
     };
@@ -16,23 +24,22 @@ const Timer = () => {
     ref.current = setInterval(() => {
       //   console.log(time);
       setTime((time) => {
-        if (time == 15 * 60) {
+        if (time == 25 * 60) {
           handlePauseResume();
           handleNewStart();
-          return 15 * 60;
+          return 25 * 60;
         } else {
           return time + 1;
         }
       });
-      // }
-    }, 10);
+    }, 1000);
   };
 
   const handleNewStart = () => {
     ref.current = setInterval(() => {
       console.log(time);
       setStartTime((time) => {
-        if (time == 2 * 60) {
+        if (time == 5 * 60) {
           handlePauseResume();
           handleReset();
           handleStart();
@@ -41,7 +48,7 @@ const Timer = () => {
           return time + 1;
         }
       });
-    }, 10);
+    }, 1000);
   };
 
   const handlePauseResume = () => {
@@ -57,7 +64,6 @@ const Timer = () => {
     <>
       <Box m="auto" mt="50px" textAlign="center">
         <Heading>Timer App</Heading>
-
         <Text color="red" display={startTime ? "block" : "none"}>
           {" "}
           {("0" + Math.floor((startTime / 60) % 60)).slice(-2)}:
@@ -71,7 +77,7 @@ const Timer = () => {
           {("0" + Math.floor(time % 60)).slice(-2)}
         </Text>
         <br />
-        <HStack m="auto" w="30%" justifyContent="space-around">
+        <HStack m="auto" w={{sm:"30%",md:"30%",lg:"30%"}} justifyContent="space-around">
           <Button colorScheme="orange" onClick={handleStart}>
             Start
           </Button>

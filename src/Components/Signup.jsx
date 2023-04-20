@@ -44,8 +44,9 @@ const Signup = () => {
     <div>
       <Box
         boxShadow="5px 5px 4px 4px"
-        w="70%"
-        h="540px"
+        // w="70%"
+        // h="540px"
+        w={{sm:"70%",md:"70%",lg:"70%"}} h={{sm:"320px",md:"550px",lg:"530px"}}
         m="auto"
         mt="50px"
         borderRadius="20px"
@@ -77,7 +78,7 @@ const Signup = () => {
           </Button>
         </Box>
         <br />
-        <Heading fontSize="20px">Already have an Acocount ? <Link to="/"> <span style={{"color":"red"}}> LogIn</span> </Link></Heading>
+        <Heading fontSize={{sm:"10px",md:"15px",lg:"20px"}}>Already have an Acocount ? <Link to="/"> <span style={{"color":"red"}}> LogIn</span> </Link></Heading>
       </Box>
     </div>
   )
