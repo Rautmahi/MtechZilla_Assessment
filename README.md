@@ -1,72 +1,32 @@
-# Getting Started with Create React App
-<!-- deployment link= (https://64418eb6b294780f7d73a32b--monumental-tarsier-a274fa.netlify.app/) -->
+Pomodoro Timer App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Pomodoro timer application that allows users to track their work sessions using the Pomodoro technique. Users can log in using their Google account and start a 25-minute timer. When the timer is complete, a 5-minute break timer will begin. The user can reset, pause, and start the timer as needed.
 
-## Available Scripts
+Getting Started
+To use this application, you'll need to have a Google account. You can log in to the application using your Google account credentials.
 
-In the project directory, you can run:
+Prerequisites
+Before you can run this application, you'll need to install the following dependencies:
 
-### `npm start`
+Node.js
+npm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Firebase Authentication
+This application uses Firebase Authentication to authenticate users. To use Firebase Authentication, you'll need to create a Firebase project and add your Firebase credentials to the application.
 
-### `npm test`
+Timer Functionality
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+When the user logs in to the application, they will see a 25-minute timer displayed on the screen. The user can click the start button to start the timer, and the timer will count down from 25 minutes. If the user needs to take a break or pause the timer, they can click the pause button. If they want to reset the timer to 25 minutes, they can click the reset button.
 
-### `npm run build`
+When the 25-minute timer is complete, a 5-minute break timer will begin. The user can start, pause, reset, and stop the break timer just like they can with the work timer.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tech Stack:
+React.js
+Firebase Authentication
+Chakra-Ui
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Authors
+Mahesh Raut 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# MtechZilla_Assessment
+Deployment Link="https://6442136258d3e27edf9003d4--bespoke-kitten-05a3a3.netlify.app/"
